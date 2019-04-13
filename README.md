@@ -1,4 +1,4 @@
-# Operating-System-Projec--Q.No.-16
+# Operating-System-Project-Q.No.-16
 
 Instruction: - Please Use Anaconda to run this program or else Errors can occur due to use of PANDA library.
 
