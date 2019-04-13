@@ -1,0 +1,18 @@
+print("Welcome to my Question No. 1")
+print("Goal is to implement Round Robin Algorithm")
+
+print("Please Enter no of Processes")
+p = int(input())
+P = []
+for i in range(p):
+    P.append("P"+str(i))
+print("Total no of Processes are: {}".format(p))
+print("Enter Burst time of each {} processes in a single line with spaces between each burst time".format(p))
+
+bu = list(map(int , input().split()))
+
+print("Enter arrival time time of each {} processes in a single line with spaces between each arrival time".format(p))
+ar = list(map(int,input().split()))
+wt = [0]*p
+print("Please Enter time quantum")
+t = int(input())
