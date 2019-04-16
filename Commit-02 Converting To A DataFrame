@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 10 19:27:14 2019
+
+@author: rishi
+"""
+
+import pandas as pd
+
+print("Welcome to my Question No. 1")
+print("Goal is to implement Round Robin Algorithm")
+
+print("Please Enter no of Processes")
+p = int(input())
+P = []
+for i in range(p):
+    P.append("P"+str(i))
+print("Total no of Processes are: {}".format(p))
+print("Enter Burst time of each {} processes in a single line with spaces between each burst time".format(p))
+
+bu = list(map(int , input().split()))
+
+print("Enter arrival time time of each {} processes in a single line with spaces between each arrival time".format(p))
+ar = list(map(int,input().split()))
+wt = [0]*p
+print("Please Enter time quantum")
+t = int(input())
+
+
+
+data = list(zip(bu,ar,wt))
+
+df1 = pd.DataFrame(data, columns=["BT","AT","WT"], index = P)
+
+
+
+df = df1.sort_values(by=['AT'])
+P = []
+for i in range(len(df)):
+     P.append(df.index[i])
+
+print(df)
