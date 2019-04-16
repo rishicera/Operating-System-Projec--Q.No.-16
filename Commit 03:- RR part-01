@@ -1,0 +1,18 @@
+import numpy as np
+def RR(p,a,b,n):
+    r_a = a
+    r_b = b
+    #Here t denotes the time, where n is time quantum
+    t = 0 
+    w = np.zeros((len(p),1))
+   # w list is for waiting time
+    c = np.zeros((len(p),1))
+    # c is for completion time
+    while(True):
+        flag = True
+        for i in range(len(p)):
+            if(r_a[i] <=t):
+                if(r_a[i] <=n):
+                    if(r_b[i]>0):
+                        flag = False
+                        if(r_b[i]>n):
